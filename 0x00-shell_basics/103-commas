@@ -1,2 +1,2 @@
 #!/bin/bash
-(ls -ap1 | sed 's/\//\//' | sed 's/$/,/' | tr -d '\n' | sed 's/,$/\n/' | head -n 2)
+ls -Ap1 | tr '\n' ',' | sed 's/,$/\n/' | sed 's/\//\//g'
