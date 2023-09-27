@@ -1,3 +1,2 @@
 #!/bin/bash
-ls -a1 | sort -t/ -k2,2 -k1,1n | sed ':a;N;$!ba;s/\n/, /g; s/\//\//g; s/, $/\n/'
-
+ls -a1 | sed 's/$/,/' | tr -d '\n' | sed 's/,$/\n/' | head -n 2
