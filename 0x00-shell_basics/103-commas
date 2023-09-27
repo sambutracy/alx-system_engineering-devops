@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap1 | tr '\n' ',' | sed 's/,$/\n/' | sed 's/\//\//g'
+ls -ap1 | awk '{ORS = NR <= 2 ? ", " : RS} END {print ""}' | sed 's/,$/\//'
