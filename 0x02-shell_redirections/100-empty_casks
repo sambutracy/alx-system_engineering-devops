@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty | sed 's/^\.\///'
+find . -type f -name "*.gif" | sed -e 's/\(.*\/\)*\(.*\)\..*/\2/' | sort -f
