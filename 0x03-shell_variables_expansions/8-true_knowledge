@@ -1,2 +1,2 @@
 #!/bin/bash
-result=$((128 + ${TRUEKNOWLEDGE:-0})); echo "$result"
+echo$((128 + ${TRUEKNOWLEDGE:-0}))
