@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
 # Initialize counter
+
 counter=0
 
 # Loop until counter is equal to 10
