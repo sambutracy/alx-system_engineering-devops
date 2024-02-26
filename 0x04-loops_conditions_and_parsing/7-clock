@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Initialize variables
+
+hour=0
+minute=1
+
+# Loop until hour is less than or equal to 12
+while [ $hour -le 12 ]
+do
+    # Display the current time
+    printf "%02d:%02d\n" $hour $minute
+    
+    # Increment minute
+    ((minute++))
+    
+    # If minute exceeds 59, reset it to 1 and increment hour
+    if [ $minute -gt 59 ]
+    then
+        minute=1
+        ((hour++))
+    fi
+done | head -n 70
