@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Initialize counter
+
+counter=1
+
+# Loop until counter is equal to 10
+while [ $counter -le 10 ]
+do
+    # Check the current iteration
+    if [ $counter -eq 4 ]
+    then
+        echo "bad luck"
+    elif [ $counter -eq 8 ]
+    then
+        echo "good luck"
+    else
+        echo "Best School"
+    fi
+    
+    # Increment counter
+    ((counter++))
+done
