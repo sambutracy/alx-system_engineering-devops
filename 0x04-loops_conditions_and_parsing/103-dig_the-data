@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Extracts IP addresses and HTTP status codes from Apache log files,
 # groups them, and displays the count, IP address, and status code
 # of each log entry, sorted by occurrence count.
