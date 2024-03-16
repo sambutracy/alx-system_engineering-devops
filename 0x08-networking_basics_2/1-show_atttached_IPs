@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script Name: show_attached_IPs.sh
+# Description: This script displays all active IPv4 IPs on the machine.
+
+ip -o -4 addr show | awk '{print $4}' | cut -d'/' -f1
