@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script Name: show_attached_IPs.sh
+# Description: This script displays all active IPv4 IPs on the machine.
+
+# Check if the 'ip' command is available
+command -v ip >/dev/null 2>&1 || { echo >&2 "The 'ip' command is required but not found. Aborting."; exit 1; }
+
+# Get the list of all active IPv4 IPs
+ip_addresses=$(ip -4 addr show | grep "inet " | awk '{print $2}' | cut -d'/' -f1)
+
+# Iterate over the IP addresses and display them
+for address in $ip_addresses;
+do
+  echo "$address"
+done
