@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Specify the server IP address or hostname
+# Use SSH with the specified private key and user
+ssh -i ~/.ssh/school ubuntu@52.207.52.20
