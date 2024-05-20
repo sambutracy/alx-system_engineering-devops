@@ -7,6 +7,7 @@ import csv
 import requests
 import sys
 
+
 def fetch_employee_data(employee_id):
     """
     Fetch employee data including name and todo list progress.
@@ -32,6 +33,7 @@ def fetch_employee_data(employee_id):
 
     return employee_name, todos_data
 
+
 def export_to_csv(employee_id, employee_name, todos_data):
     """
     Export the TODO list progress of the employee to a CSV file.
@@ -45,7 +47,8 @@ def export_to_csv(employee_id, employee_name, todos_data):
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todos_data:
             writer.writerow([employee_id, employee_name,
-                task.get('completed'), task.get('title')])
+                             task.get('completed'), task.get('title')])
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -60,4 +63,3 @@ if __name__ == "__main__":
 
     employee_name, todos_data = fetch_employee_data(employee_id)
     export_to_csv(employee_id, employee_name, todos_data)
-
